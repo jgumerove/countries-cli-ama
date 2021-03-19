@@ -1,0 +1,1 @@
+CountriesAPI.new.response.each{|country_hash| Country.new(country_hash)}

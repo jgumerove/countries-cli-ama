@@ -2,6 +2,7 @@ class CLI
 
     def initialize
         welcome
+        #CountriesAPI.new.response.each{|country_hash| Country.new(country_hash)}
     end
 
 
