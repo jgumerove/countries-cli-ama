@@ -4,6 +4,7 @@ class CLI
         country_list
         welcome
         menu
+        goodbye
         #CountriesAPI.new.response.each{|country_hash| Country.new(country_hash)}
     end
 
@@ -43,6 +44,10 @@ class CLI
         Country.all.each_with_index do |country, index|
             puts "#{index + 1}. #{country.name}"
         end
+    end
+
+    def goodbye
+        puts "Thank you for using the application - hope to see you soon!"
     end
 
 
