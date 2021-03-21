@@ -9,6 +9,7 @@ class CLI
 
     def welcome
         puts "Welcome to Countries CLI, a go to gem for information on European Countries"
+        puts "Europe is a continent with a population of approximately #{Country.euro_population} million people"
         puts "below is a list of all the countries in europe:"
     end
 

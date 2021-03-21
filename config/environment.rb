@@ -6,4 +6,3 @@ require_relative "../models/countries_api.rb"
 require_relative "../models/country.rb"
 require_relative "./seeds.rb"
 
-#.. leaves config folder

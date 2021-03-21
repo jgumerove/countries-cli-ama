@@ -17,5 +17,13 @@ class Country
     def self.all
         @@all
     end
+    
+    def self.euro_population
+        country_population.inject{|sum, n| sum + n}
+    end
+
+    def self.country_population 
+        self.all.collect{|country| country.population}
+    end
 
 end
