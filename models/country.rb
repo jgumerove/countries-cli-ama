@@ -22,6 +22,8 @@ class Country
         country_population.inject{|sum, n| sum + n}
     end
 
+    private
+
     def self.country_population 
         self.all.collect{|country| country.population}
     end
