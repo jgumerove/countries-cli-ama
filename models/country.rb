@@ -1,6 +1,6 @@
 class Country
 
-    attr_reader :name, :capital, :location, :population 
+    attr_reader :name, :capital, :location, :population, :language, :currency
 
     @@all = []
 
@@ -9,6 +9,8 @@ class Country
         @capital = hash["capital"]
         @location = hash["subregion"]
         @population = hash["population"]
+        @language = hash["languages"][0]["name"]
+        @currency = hash["currencies"][0]["name"]
         @@all << self
     end
 

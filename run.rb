@@ -13,4 +13,4 @@ puts "Your favorite color is #{color}"
 #similar to gets.chomp but more functionality 
 #look into TTY prompt documentation to see if will be helpful
 
-#binding.pry
+binding.pry
