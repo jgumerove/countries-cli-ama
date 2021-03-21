@@ -1,8 +1,8 @@
 class CLI
 
     def initialize
-        country_list
         welcome
+        
         menu
         goodbye
         #CountriesAPI.new.response.each{|country_hash| Country.new(country_hash)}
@@ -16,6 +16,7 @@ class CLI
 
     def menu
         puts "below is a list of all the countries in europe:"
+        country_list
         input = nil
         while input != "exit"
             puts "Enter the number of the country you would like more information on - or type list to see the list of countries again - or type exit:"
