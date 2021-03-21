@@ -2,6 +2,7 @@ class CLI
 
     def initialize
         country_list
+        welcome
         menu
         #CountriesAPI.new.response.each{|country_hash| Country.new(country_hash)}
     end
@@ -19,11 +20,15 @@ class CLI
             puts "Enter the number of the country you would like more information on - or type list to see the list of countries again - or type exit:"
             input = gets.strip.downcase
 
-            if input.to_i > 0 
+            if input.to_i > 0 && input.to_i <= Country.all.count
                 the_country = Country.all[input.to_i-1]
                 puts "**********#{the_country.name.upcase}**********"
-                puts "     #{the_country.capital}"  #5 indents
-                puts "     #{the_country.capital}"
+                puts "     Capital: #{the_country.capital}"  #5 indents
+                puts "     Region: #{the_country.location}"
+                puts "     Population: #{the_country.population}"
+                puts "     Language: #{the_country.language}"
+                puts "     Currency: #{the_country.currency}"
+                puts "****************************"
 
             elsif input == "list"
                 country_list
@@ -35,7 +40,6 @@ class CLI
     end
 
     def country_list
-        welcome
         Country.all.each_with_index do |country, index|
             puts "#{index + 1}. #{country.name}"
         end
