@@ -34,7 +34,7 @@ class CLI
             elsif input =="exit"
                 goodbye
             else
-                puts "that is not a valid option - type list or exit"
+                puts "that is not a valid option:"
             end
         end
     end
