@@ -4,8 +4,6 @@ class CLI
         welcome
         country_list
         menu
-        goodbye
-        #CountriesAPI.new.response.each{|country_hash| Country.new(country_hash)}
     end
 
 
@@ -33,6 +31,8 @@ class CLI
 
             elsif input == "list"
                 country_list
+            elsif input =="exit"
+                goodbye
             else
                 puts "that is not a valid option - type list or exit"
             end
