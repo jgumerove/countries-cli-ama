@@ -17,8 +17,12 @@ class Country
     def self.all
         @@all
     end
+
+    def self.delete
+        @@all.clear
+    end
     
-    def self.euro_population
+    def self.region_population
         country_population.inject{|sum, n| sum + n}
     end
 
