@@ -18,7 +18,7 @@ class Country
         @@all
     end
 
-    def self.delete
+    def self.reset_all
         @@all.clear
     end
     

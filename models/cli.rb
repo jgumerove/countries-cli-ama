@@ -15,7 +15,7 @@ class CLI
     def menu
         input = nil
         while input != "exit"
-            puts "Enter the number of the country you would like more information on - or type list to see the list of countries again - or type region to select a new region - or type exit:"
+            puts "Enter the number of the country you would like more information - type list to see the list of countries again - type region to select a new region - or type exit to leave:"
             input = gets.strip.downcase
 
             if input.to_i > 0 && input.to_i <= Country.all.count
@@ -31,7 +31,7 @@ class CLI
             elsif input == "list"
                 country_list
             elsif input == "region"
-                Country.delete
+                Country.reset_all
                 select_region
                 country_list
             elsif input =="exit"
@@ -49,7 +49,7 @@ class CLI
     end
 
     def select_region
-        puts "please select one of the following regions: 1. Africa 2. Asia 3. Europe 4. Oceania"
+        puts "please select one of the following regions by typing the name: 1) Africa 2) Asia 3) Europe 4) Oceania 5) Americas"
         input = gets.strip.capitalize
         case input
         when "Africa"
@@ -66,6 +66,10 @@ class CLI
             puts "Below is a list of all the countries of #{input}:"
         when "Oceania"
             Oceania.new.response.each{|country_hash| Country.new(country_hash)}
+            puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
+            puts "Below is a list of all the countries of the #{input} region:"
+        when "Americas"
+            Americas.new.response.each{|country_hash| Country.new(country_hash)}
             puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
             puts "Below is a list of all the countries of the #{input} region:"
         else
