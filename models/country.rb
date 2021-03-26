@@ -32,4 +32,5 @@ class Country
         self.all.collect{|country| country.population}
     end
 
+
 end

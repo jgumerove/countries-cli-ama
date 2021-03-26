@@ -8,7 +8,7 @@ class CLI
 
 
     def welcome
-        puts "Welcome to Countries CLI, a go to gem for information on Countries and Regions"
+        puts "Welcome to Countries CLI, a go to application for information on Countries and Regions"
         select_region   
     end
 
@@ -26,7 +26,7 @@ class CLI
                 puts "     Population: #{the_country.population}"
                 puts "     Language: #{the_country.language}"
                 puts "     Currency: #{the_country.currency}"
-                puts "****************************"
+                puts "**********#{the_country.name.upcase}**********"
 
             elsif input == "list"
                 country_list
@@ -49,28 +49,28 @@ class CLI
     end
 
     def select_region
-        puts "please select one of the following regions by typing the name: 1) Africa 2) Asia 3) Europe 4) Oceania 5) Americas"
+        puts "Please select one of the following regions by typing the name: 1) Africa 2) Asia 3) Europe 4) Oceania 5) Americas"
         input = gets.strip.capitalize
         case input
         when "Africa"
             Africa.new.response.each{|country_hash| Country.new(country_hash)}
-            puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
+            region_details(input)
             puts "Below is a list of all the countries of #{input}:"
         when "Asia"
             Asia.new.response.each{|country_hash| Country.new(country_hash)}
-            puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
+            region_details(input)
             puts "Below is a list of all the countries of #{input}:"
         when "Europe"
             Europe.new.response.each{|country_hash| Country.new(country_hash)}
-            puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
+            region_details(input)
             puts "Below is a list of all the countries of #{input}:"
         when "Oceania"
             Oceania.new.response.each{|country_hash| Country.new(country_hash)}
-            puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
+            region_details(input)
             puts "Below is a list of all the countries of the #{input} region:"
         when "Americas"
             Americas.new.response.each{|country_hash| Country.new(country_hash)}
-            puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
+            region_details(input)
             puts "Below is a list of all the countries of the #{input} region:"
         else
             puts "that is not a valid option please type the region you would like more information on"
@@ -81,5 +81,12 @@ class CLI
     def goodbye
         puts "Thank you for using the application - hope to see you soon!"
     end
+
+    private
+
+    def region_details(input)
+        puts "#{input} is a region with a population of approximately #{Country.region_population} million people"
+    end
+
 
 end
