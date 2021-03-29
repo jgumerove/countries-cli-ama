@@ -23,7 +23,7 @@ class CLI
                 puts "**********#{the_country.name.upcase}**********"
                 puts "     Capital: #{the_country.capital}"  
                 puts "     Region: #{the_country.location}"
-                puts "     Population: #{the_country.population}"
+                puts "     Population: #{separate_comma(the_country.population)}"
                 puts "     Language: #{the_country.language}"
                 puts "     Currency: #{the_country.currency}"
                 puts "**********#{the_country.name.upcase}**********"
@@ -85,8 +85,30 @@ class CLI
     private
 
     def region_details(input)
-        puts "#{input} is a region with a population of approximately #{Country.region_population} people"
+        puts "#{input} is a region with a population of approximately #{separate_comma(Country.region_population)} people"
     end
+
+    def separate_comma(number)
+        a = number.to_s.split('')
+        b = a.size/3.0
+        if a.size < 4
+           number.to_s 
+        elsif a.size%3 == 0
+          n = -4
+          (b.to_i-1).times do |i|
+            a.insert(n, ',')
+            n -= 4
+          end
+           a.join("")
+        else
+            n = -4
+          b.to_i.times do |i|
+            a.insert(n, ',')
+            n -= 4
+          end
+          a.join("")
+        end
+      end
 
 
 end
