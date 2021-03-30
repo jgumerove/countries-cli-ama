@@ -32,5 +32,9 @@ class Country
         self.all.collect{|country| country.population}
     end
 
+    def self.largest_country
+        self.all.sort{|country1, country2| country1.population <=> country2.population}.last.name
+    end
+
 
 end

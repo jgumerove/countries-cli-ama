@@ -85,7 +85,8 @@ class CLI
     private
 
     def region_details(input)
-        puts "#{input} is a region with a population of approximately #{separate_comma(Country.region_population)} people"
+        puts "#{input} is a region with a population of approximately #{separate_comma(Country.region_population)} people;"
+        puts "The largest country in the region is #{Country.largest_country};"
     end
 
     def separate_comma(number)
