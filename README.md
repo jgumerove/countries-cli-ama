@@ -10,7 +10,7 @@ After cloning the repository the following command must be executed:
 
 ## USAGE 
 To start the application run the following command in the terminal:
-- `ruby run.rb` <br />
+* `ruby run.rb` <br />
 After running the above command simply follow the instructions given via the command-line. Follow the prompt to select regions and countries for further information.
 
 ## CONTRIBUTOR GUIDE
