@@ -1,4 +1,4 @@
-# ABOUT COUNTRIESCLI
+# ABOUT CountriesCLI
 CountriesCLI is a Ruby Command-Line Interface gem that allows users to select countries - and see additional information once a country has been selected. Before selecting a specific country - a particular region must be selected.
 
 ## BUILT WITH
