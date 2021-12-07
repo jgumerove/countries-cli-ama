@@ -1,9 +1,21 @@
-This Ruby Gem provides a CLI to view information on every region and country in the world.  Simply select a region and view the countries in that region.  Select a country you would like more information on within that region.
+# ABOUT COUNTRIESCLI
+CountriesCLI is a Ruby Command-Line Interface gem that allows users to select countries - and see additional information once a country has been selected. Before selecting a specific country - a particular region must be selected.
 
+## BUILT WITH
+Only object-oriented Ruby was used in the creation of CountriesCLI
 
-TO USE THE APP
+## INSTALLATION 
+After cloning the repository the following command must be executed:
+`$ bundle install`
 
-simply run bundle install.
+## USAGE 
+To start the application run the following command in the terminal:
+`ruby run.rb`
+After runnin the above command simply follow the instructions given via the command-line. Follow the prompt to select regions and countries for further information.
 
-Then start the app with ruby run.rb
+## CONTRIBUTOR GUIDE
+Bug reports and questions are welcomed at the following [(https://github.com/jgumerove)]
+
+## LICENSE
+
 
