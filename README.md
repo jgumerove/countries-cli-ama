@@ -17,5 +17,5 @@ After runnin the above command simply follow the instructions given via the comm
 Bug reports and questions are welcomed at the following [(https://github.com/jgumerove)]
 
 ## LICENSE
-
+Licensed under the [MIT License](LICENSE). 
 
