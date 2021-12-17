@@ -20,3 +20,10 @@ Bug reports and questions are welcomed at the following [(https://github.com/jgu
 ## LICENSE
 Licensed under the [MIT License](LICENSE). 
 
+## VIDEO DEMONSTRATION
+
+
+
+
+https://user-images.githubusercontent.com/70603460/146562629-2f59d783-b57d-4955-ac01-b585d1b75d5c.mp4
+
